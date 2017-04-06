@@ -1,0 +1,48 @@
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#6D5297"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Level 1"
+        android:gravity="center"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find the one that caused the image"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/quest1"
+        android:textSize="18dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want some help?"
+        android:id="@+id/whint1"
+        android:textSize="18dp"
+        android:visibility="invisible"/>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#64488E">
+    <ImageView
+        android:id="@+id/image_areas1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        android:src="@drawable/whereamihotspot"
+        />
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/whereami"
+        />
+</FrameLayout>
+    </LinearLayout>
