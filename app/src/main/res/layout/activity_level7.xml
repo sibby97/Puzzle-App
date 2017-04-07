@@ -6,13 +6,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Level 1"
+        android:text="Level 7"
         android:gravity="center"
         android:textSize="20dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Find the one that caused the image"
+        android:text="Find the one who likes nature and trees!"
         android:gravity="center"
         android:layout_gravity="center"
         android:id="@+id/quest1"
@@ -35,29 +35,29 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/my_frame"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#2C6CBD">
-    <ImageView
-        android:id="@+id/image_areas1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="fitCenter"
-        android:visibility="invisible"
-        android:src="@drawable/whereamihotspot"
-        />
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/my_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#2C6CBD">
+                <ImageView
+                    android:id="@+id/image_areas1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:visibility="invisible"
+                    android:src="@drawable/whereamihotspot"
+                    />
 
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="fitCenter"
-        android:src="@drawable/whereami"
-        />
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/whereami"
+                    />
 
-    </FrameLayout>
+            </FrameLayout>
         </HorizontalScrollView>
     </ScrollView>
-    </LinearLayout>
+</LinearLayout>

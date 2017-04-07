@@ -20,39 +20,41 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class Main2Activity extends AppCompatActivity {
+public class level9 extends AppCompatActivity {
 
     Point p;
     int comtim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_level9);
+        ImageView img = (ImageView) findViewById(R.id.image1);
         TextView textView = (TextView) findViewById(R.id.quest1);
-        final Chronometer chrono = (Chronometer) findViewById(R.id.chronometer2);
+        final Chronometer chrono = (Chronometer) findViewById(R.id.chronometer);
+        chrono.setBase(SystemClock.elapsedRealtime());
         chrono.start();
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView t = (TextView) findViewById(R.id.whint2);
-                if(t.getVisibility() == View.VISIBLE){
+                TextView t = (TextView) findViewById(R.id.whint1);
+                if (t.getVisibility() == View.VISIBLE) {
                     t.setVisibility(View.INVISIBLE);
-                }
-                else {
+                } else {
                     t.setVisibility(View.VISIBLE);
                 }
             }
         });
-        TextView t = (TextView) findViewById(R.id.whint2);
+
+        TextView t = (TextView) findViewById(R.id.whint1);
         t.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Open popup window
                 if (p != null)
-                    showPopup(Main2Activity.this, p);
+                    showPopup(level9.this, p);
             }
         });
-        ImageView img = (ImageView) findViewById(R.id.image);
+
         img.setOnTouchListener(new View.OnTouchListener(){
             @Override
             public boolean onTouch (View v, MotionEvent ev) {
@@ -74,7 +76,7 @@ public class Main2Activity extends AppCompatActivity {
                         // The colors are red, blue, and yellow.
                         // Use image_areas to determine which region the user touched.
                         // (2)
-                        int touchColor = getHotspotColor (R.id.image_areas, evX, evY);
+                        int touchColor = getHotspotColor (R.id.image_areas1, evX, evY);
                         // Compare the touchColor to the expected values.
                         // Switch to a different image, depending on what color was touched.
                         // Note that we use a Color Tool object to test whether the
@@ -85,18 +87,17 @@ public class Main2Activity extends AppCompatActivity {
                         int tolerance = 25;
                         nextImage = R.drawable.whereami;
                         // (3)
-                        if (closeMatch (Color.parseColor("#A349A4"), touchColor, tolerance)) {
+                        if (closeMatch (Color.parseColor("#00A2E8"), touchColor, tolerance)) {
                             // Do the action associated with the RED region
-                            nextImage = R.drawable.whereamilevel1;
+                            nextImage = R.drawable.whereamilevel9;
                             chrono.stop();
-                            showPopup1(Main2Activity.this, p,chrono);
-
+                            showPopup1(level9.this,p,chrono);
                         } else {
                             //...
                         }
                         break;
                 } // end switch
-                ImageView imageView = (ImageView) findViewById(R.id.image);
+                ImageView imageView = (ImageView) findViewById(R.id.image1);
                 if (nextImage > 0) {
                     imageView.setImageResource (nextImage);
                     imageView.setTag (nextImage);
@@ -127,14 +128,11 @@ public class Main2Activity extends AppCompatActivity {
             return false;
         return true;
     }
-    // Get the x and y position after the button is draw on screen
-// (It's important to note that we can't get the position in the onCreate(),
-// because at that stage most probably the view isn't drawn yet, so it will return (0, 0))
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
 
         int[] location = new int[2];
-        TextView textView = (TextView) findViewById(R.id.whint2);
+        TextView textView = (TextView) findViewById(R.id.whint1);
         // Get the x, y location and store it in the location[] array
         // location[0] = x, location[1] = y.
         textView.getLocationOnScreen(location);
@@ -151,14 +149,12 @@ public class Main2Activity extends AppCompatActivity {
         int popupHeight = 750;
 
         // Inflate the popup_layout.xml
-        LinearLayout viewGroup = (LinearLayout) context.findViewById(R.id.popupone);
+        LinearLayout viewGroup = (LinearLayout) context.findViewById(R.id.popuptwo);
         LayoutInflater layoutInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View layout = layoutInflater.inflate(R.layout.popup2, viewGroup);
-
+        View layout = layoutInflater.inflate(R.layout.popup9, viewGroup);
         // Creating the PopupWindow
         final PopupWindow popup = new PopupWindow(context);
-
         popup.setContentView(layout);
         popup.setWidth(popupWidth);
         popup.setHeight(popupHeight);
@@ -177,7 +173,7 @@ public class Main2Activity extends AppCompatActivity {
         // Getting a reference to Close button, and close the popup when clicked.
 
     }
-    private void showPopup1(final Activity context, Point p,Chronometer chrono) {
+    private void showPopup1(final Activity context, Point p, Chronometer chrono) {
         int popupWidth = 1220;
         int popupHeight = 750;
 
@@ -186,7 +182,6 @@ public class Main2Activity extends AppCompatActivity {
         LayoutInflater layoutInflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout = layoutInflater.inflate(R.layout.complete, viewGroup);
-
         // Creating the PopupWindow
         final PopupWindow popup = new PopupWindow(context);
         TextView tv = (TextView)layout.findViewById(R.id.comtime);
@@ -194,8 +189,8 @@ public class Main2Activity extends AppCompatActivity {
         tv.setText("Time: "+time+"seconds");
         comtim = (int)time;
         Globals g = Globals.getInstance();
-        if((g.gettime(1)>comtim)||(g.gettime(1)==0)) {
-            g.settime(comtim, 1);
+        if((g.gettime(8)>comtim)||(g.gettime(8)==0)) {
+            g.settime(comtim, 8);
         }
         popup.setContentView(layout);
         popup.setWidth(popupWidth);

@@ -1,12 +1,12 @@
 <LinearLayout android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#6D5297"
+    android:background="#4587DA"
     xmlns:android="http://schemas.android.com/apk/res/android" >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Level 1"
+        android:text="Level 2"
         android:gravity="center"
         android:textSize="20dp" />
     <TextView
@@ -21,14 +21,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Want some help?"
-        android:id="@+id/whint1"
+        android:id="@+id/whint2"
         android:textSize="18dp"
         android:visibility="invisible"/>
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer2"
+        android:layout_gravity="center_horizontal|top" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/my_frame"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#64488E">
+    android:background="#2C6CBD">
     <ImageView
         android:id="@+id/image_areas"
         android:layout_width="fill_parent"
@@ -46,4 +57,6 @@
         />
 
 </FrameLayout>
+        </HorizontalScrollView>
+    </ScrollView>
 </LinearLayout>

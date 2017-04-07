@@ -3,7 +3,7 @@
     android:id="@android:id/tabhost"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#64488E">
+    android:background="#3D78C3">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"

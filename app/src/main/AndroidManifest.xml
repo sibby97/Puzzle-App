@@ -15,9 +15,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".Tab" />
-        <activity android:name=".level2"></activity>
+        <activity
+            android:name=".Main2Activity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".level1"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MyScore" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level3" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level4" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level5" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level6" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level7" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level8" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level9" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level10" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level11" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".level12" android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
